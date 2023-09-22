@@ -2,24 +2,26 @@
 <html>
 <head>
     <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+
 </head>
 <body style="background-color: aliceblue;font-family: Arial, Helvetica, sans-serif;">
     
     <form>
-    <div align="center">
+    <div class="main">
     <table>
     <tr>
         
-        <td><h1>Login Form</h1></td>
+        <td><h2>Login Form</h2></td>
     </tr>
 
     <tr>
         
-        <td><input type="text" placeholder="Email Address" style="width: 170px;height:30px"></td>
+        <td><input type="text" placeholder="Email Address" style="width: 170px;height:30px" required></td>
     </tr>
     <tr>
   
-        <td><input type="password" placeholder="Password" style="width: 170px;height:30px"></td>
+        <td><input type="password" placeholder="Password" style="width: 170px;height:30px" required></td>
     </tr>
     
     <tr>
@@ -32,7 +34,7 @@
     </tr>
     <tr>
         
-        <td><input type="submit" value="Login" style="width: 180px;height:30px;background-color: azure;font-weight: bold;"></td>
+        <td><button class="btn" type="submit" value="Login" style="width: 180px;height:30px;font-weight: bold;">Login</button></td>
     </tr>
      <tr>
         
@@ -40,7 +42,7 @@
     </tr>
     <tr>
         
-        <td><a href="Register.html" style="text-decoration: none;">signup now</a></td>
+        <td><a class="signup-link" href="Register.html">signup now</a></td>
     </tr>
     </table>
     </div>
