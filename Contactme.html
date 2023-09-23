@@ -11,6 +11,7 @@
     </style>
 </head>
 <body>
+    <script src="js/contact.js"></script>
 
     <h2>Get in Touch</h2>
     <p>If you have any feedback, please don't hesitate to contact me. I would love to hear from you..!</p>
@@ -26,8 +27,9 @@
     <form>
         <table class="cform">
             <tr><td><input type="text" placeholder="Your Name" style="width: 170px;height:30px" ></td></tr>
-            <tr><td><input type="email" placeholder="Your Email" style="width: 170px;height:30px"></td></tr>
-            <tr><td><textarea placeholder="Your Message" style="width: 170px;height:30px"></textarea></td></tr>
+            <tr><td><input type="email" id="email" onfocusout="validateEmail()" placeholder="Your Email" style="width: 170px;height:30px"></td>
+                <td><span id="erroremail"></span></td></tr>
+            <tr><td><textarea placeholder="Your Message" style="width: 170px;height:30px" required></textarea></td></tr>
             <tr><td><button class="btn" type="submit">Send</button></td></tr>
 
         </table>
