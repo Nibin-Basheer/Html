@@ -10,23 +10,38 @@
     font-family: Arial, Helvetica, sans-serif;
 }
     </style>
+
+<script>
+  function calculateAge() {
+    const dobInput = document.getElementById("dob").value;
+    const dob = new Date(dobInput);
+    const today = new Date();
+
+    const ageInMilliseconds = today - dob;
+    const ageInYears = ageInMilliseconds / (365 * 24 * 60 * 60 * 1000);
+
+    const ageField = document.getElementById("age");
+    ageField.value =Math.floor(ageInYears);
+    }
+</script>
     
 </head>
 <body>
+    <script src="js/register.js"></script>
     <div class="main">
         <h1>Register Form</h1>
         <form>
             <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" required>
+            <input type="text" id="firstName" onfocusout="validateFname()"><span id="Errorfname"></span>
 
             <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName"  required>
+            <input type="text" id="lastName" onfocusout="validateLname()"><span id="Errorlname"></span>
 
             <label for="dob">Date of Birth:</label>
-            <input type="date" id="dob"  required>
+            <input type="date" id="dob" onchange="calculateAge()"  required>
 
             <label for="age">Age:</label>
-            <input type="number" id="age" min="18" max="60" required>
+            <input type="number" id="age" min="18" max="60" readonly>
 
             <label>Gender:</label>
         
@@ -37,10 +52,10 @@
         
 
             <label for="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" maxlength="10" required>
+            <input type="tel" id="phone" onfocusout="validatePhone()" maxlength="10"><span id="Errorphone"></span>
 
             <label for="email">Email:</label>
-            <input type="email" id="email"required>
+            <input type="email" id="email" onfocusout="validateEmail()"><span id="Erroremail"></span>
 
             <label for="address">Address:</label>
             <textarea id="address" required></textarea>
@@ -73,7 +88,8 @@
             <input type="password" id="password" required>
 
             <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" required>
+            <input type="password" id="confirmPassword" onfocusout="comparePasswords()" required>
+            <span id="passwordError" style="color: red;"></span>
 
             <input type="submit" value="Register">
         </form>

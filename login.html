@@ -6,6 +6,8 @@
 
 </head>
 <body style="background-color: aliceblue;font-family: Arial, Helvetica, sans-serif;">
+
+    <script src="js/login.js"></script>
     
     <form>
     <div class="main">
@@ -17,13 +19,15 @@
 
     <tr>
         
-        <td><input type="text" placeholder="Email Address" style="width: 170px;height:30px" required></td>
+        <td><input type="text" id="uemail" onfocusout="validateUname()" placeholder="Email Address" style="width: 170px;height:30px"></td>
+        
     </tr>
+    <tr><td><p id="errormsg" style="color: red;"></span></td></tr>
     <tr>
-  
-        <td><input type="password" placeholder="Password" style="width: 170px;height:30px" required></td>
+   
+        <td><input type="password" id="upwd" onfocusout="validatePwd()" placeholder="Password" style="width: 170px;height:30px"></td>
     </tr>
-    
+    <tr><td><p id="errormsg1" style="color: red;"></span></td></tr>
     <tr>
         
         <td><input type="checkbox">Remember me</td>
