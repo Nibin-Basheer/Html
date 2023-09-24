@@ -11,3 +11,13 @@ nav{
     width:100%;
 
 }
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 400px; /* Adjust the width as needed */
+}
+.carousel img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}

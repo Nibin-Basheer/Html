@@ -34,8 +34,8 @@ function validatePhone() {
 
     if (phoneValue === "") {
         phoneError.textContent = "*Please enter your phone number";
-        phoneNumberError.style.fontSize = "13px";
-        phoneNumberError.style.color = "red";
+        phoneError.style.fontSize = "13px";
+        phoneError.style.color = "red";
     } else if (!phoneExp.test(phoneValue)) {
         phoneError.textContent = "*please enter a valid phone number";
         phoneError.style.fontSize = "13px";

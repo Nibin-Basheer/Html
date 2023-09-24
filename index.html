@@ -2,7 +2,13 @@
 <html>
 <head>
     <title>Register</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <link rel="stylesheet" href="css/index.css">
+    
+
+
 
     <style>
         a{
@@ -23,11 +29,14 @@
         }
         
         footer{
+
             position: absolute;
             text-align: center;
             background-color: darkslategrey;
             color: white;
             height: 100px;
+            margin: auto;
+            
         }
     </style>
 </head>
@@ -48,12 +57,29 @@
     </header>
 
     <section>
-        <img class="img1" src="images/coding_languages.jpg" alt="image">
-    </section>
+        <!-- <img class="img1" src="images/coding_languages.jpg" alt="image"> -->
+    
 
-    <footer style="padding: 10px;width: 100%;">
 
-        &copy; 2023 Nibzz. All Rights Reserved.
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style="width: 100%; height:100%;"> 
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/coding_languages.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src="images/asp_net.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src="images/sqlserver.jpg">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer style="padding-top: 50px;width: 100%;">
+        
+
+        &copy; <span>2023 Nibzz. All Rights Reserved.</span>
 
     </footer>
                     
